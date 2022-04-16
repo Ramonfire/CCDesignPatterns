@@ -9,9 +9,52 @@ public  abstract class Detectors {
     private String type;
     private  Messages message;
     private Alert alert;
+    private Long cmp=Long.valueOf(0);
 
+    public Detectors() {
+    }
 
-    private Boolean receiveAlert(Long from,Alert alert){
+    public Long getIdentifiant() {
+        return identifiant;
+    }
+
+    public void setIdentifiant(Long identifiant) {
+        this.identifiant = cmp++;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Messages getMessage() {
+        return message;
+    }
+
+    public void setMessage(Messages message) {
+        this.message = message;
+    }
+
+    public Alert getAlert() {
+        return alert;
+    }
+
+    public void setAlert(Alert alert) {
+        this.alert = alert;
+    }
+
+    private Boolean receiveAlert(Long from, Alert alert){
         Boolean value= Boolean.FALSE;
 
 
