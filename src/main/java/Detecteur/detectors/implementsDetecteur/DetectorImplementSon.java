@@ -6,7 +6,7 @@ public class DetectorImplementSon extends Detectors {
 
     public DetectorImplementSon() {
         setBrand("sony");
-        setIdentifiant(Long.valueOf(0));
+        setIdentifiant(0);
         setType("son");
     }
 }

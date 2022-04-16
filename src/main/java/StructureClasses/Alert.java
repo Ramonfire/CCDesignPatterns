@@ -1,5 +1,7 @@
 package StructureClasses;
 
 public class Alert {
-    String MessageAlert;
+    public  Long origin;
+    public Long  Destinataire;
+    public String MessageAlert;
 }

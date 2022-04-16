@@ -6,7 +6,7 @@ public class ImplementDetecteurFacial  extends Detectors {
 
     public ImplementDetecteurFacial() {
         setBrand("samsung");
-        setIdentifiant(Long.valueOf(0));
+        setIdentifiant(0);
         setType("faceID");
 
     }

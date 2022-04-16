@@ -4,21 +4,21 @@ import StructureClasses.Alert;
 import StructureClasses.Messages;
 
 public  abstract class Detectors {
-    private Long identifiant;
+    private int identifiant;
     private String brand;
     private String type;
     private  Messages message;
     private Alert alert;
-    private Long cmp=Long.valueOf(0);
+    private int cmp=0;
 
     public Detectors() {
     }
 
-    public Long getIdentifiant() {
+    public int getIdentifiant() {
         return identifiant;
     }
 
-    public void setIdentifiant(Long identifiant) {
+    public void setIdentifiant(int identifiant) {
         this.identifiant = cmp++;
     }
 
@@ -54,14 +54,14 @@ public  abstract class Detectors {
         this.alert = alert;
     }
 
-    private Boolean receiveAlert(Long from, Alert alert){
+    private Boolean receiveAlert( Alert alert){
         Boolean value= Boolean.FALSE;
 
 
         return  value;
     }
 
-    private String SendAlert(Alert alert,Long To){
+    private String SendAlert(Alert alert){
         String response= "Error";
 
         return  response;

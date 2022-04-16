@@ -6,7 +6,7 @@ public class ImplementDetecteurIcendie extends Detectors {
 
     public ImplementDetecteurIcendie () {
         setBrand("Fuji");
-        setIdentifiant(Long.valueOf(0));
+        setIdentifiant(0);
         setType("incendie");
     }
 
