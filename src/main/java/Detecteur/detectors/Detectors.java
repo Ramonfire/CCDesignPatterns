@@ -54,20 +54,21 @@ public  abstract class Detectors {
         this.alert = alert;
     }
 
-    private Boolean receiveAlert( Alert alert){
-        Boolean value= Boolean.FALSE;
-
-
-        return  value;
+    public void receiveAlert( Alert alert){
+        this.alert=alert;
+        System.out.println("received an alerm from " +alert.origin);
+        System.out.println("Content : " + alert.MessageAlert);
     }
 
-    private String SendAlert(Alert alert){
-        String response= "Error";
-
-        return  response;
+    public Alert SendAlert(Long destinataire,String data){
+        Alert alert1=new Alert();
+        alert1.MessageAlert=data;
+        alert1.Destinataire=destinataire;
+        alert1.origin=Long.valueOf(this.getIdentifiant());
+        return  alert1;
     }
 
-    private void notifieSystem(){
+    public void notifieSystem(){
 
     }
 

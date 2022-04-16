@@ -9,6 +9,7 @@ public class users extends account {
     private String firstName;
     private String lastName;
     private boolean accountType;
+    public proxy filtre;
 
     public users(){
 
@@ -45,6 +46,16 @@ public class users extends account {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public boolean isAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(boolean accountType) {
+        this.accountType = accountType;
+    }
+
+
 
     public String toString(){
         return "User : " + this.firstName + " " + this.lastName;
