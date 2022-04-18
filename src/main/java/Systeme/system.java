@@ -55,8 +55,8 @@ public class system {
         ResultSet r = pstmt.executeQuery();
         while (r.next()){
             Messages message = new Messages();
-            message.setData((String) r.getObject("Data"));
-            message.setTypeAlarm( ""+r.getObject("idDetecteur"));
+            message.setData(""+ r.getObject("Data"));
+            message.setTypeAlarm( ""+r.getObject("Type"));
             messages.add(message);
         }
     }catch (SQLException e){
