@@ -55,8 +55,8 @@ public class system {
         ResultSet r = pstmt.executeQuery();
         while (r.next()){
             Messages message = new Messages();
-            message.setData((Byte[]) r.getObject("Data"));
-            message.setTypeAlarm((String) r.getObject("Type"));
+            message.setData((String) r.getObject("Data"));
+            message.setTypeAlarm( ""+r.getObject("idDetecteur"));
             messages.add(message);
         }
     }catch (SQLException e){
@@ -93,6 +93,23 @@ public class system {
         alert.MessageAlert="test";
        System.out.println(alert.MessageAlert);
         mediator.TransmettreAlert(alert,this.detectors);
+
+       try{
+           Connection conn = SingletonJDBC.getConnection();
+           String querry = "insert into messages values (?,?,null,?)";
+           PreparedStatement pstmt = (PreparedStatement) conn.prepareStatement(querry);
+           pstmt.setString(1, alert.MessageAlert);
+           pstmt.setString(2,"test");
+           pstmt.setLong(3,alert.origin);
+
+
+           int r = pstmt.executeUpdate();
+           if (r==1){
+               System.out.println("Done succesfully");;
+           }
+       }catch (SQLException e){
+           e.printStackTrace();
+       }
 
     }
 }

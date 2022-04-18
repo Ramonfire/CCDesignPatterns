@@ -2,7 +2,7 @@ package StructureClasses;
 
 public class Messages {
     private String TypeAlarm;
-    private Byte[] data;
+    private String data;
 
     public Messages() {
     }
@@ -15,11 +15,19 @@ public class Messages {
         TypeAlarm = typeAlarm;
     }
 
-    public Byte[] getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Byte[] data) {
+    public void setData(String data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "Messages{" +
+                "TypeAlarm='" + TypeAlarm + '\'' +
+                ", data='" + data + '\'' +
+                '}';
     }
 }
